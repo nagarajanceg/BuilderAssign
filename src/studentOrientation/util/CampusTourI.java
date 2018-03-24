@@ -1,5 +1,5 @@
 package studentOrientation.util;
 
-public interface CampusTourI {
+public interface CampusTourI extends VisitSchoolBuildingI, PickingGiftI {
 
 }

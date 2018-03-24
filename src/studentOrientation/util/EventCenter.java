@@ -1,4 +1,4 @@
-package campusTour.util;
+package studentOrientation.util;
 
 public class EventCenter implements PickingGiftI{
 

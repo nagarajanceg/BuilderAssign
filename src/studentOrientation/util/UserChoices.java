@@ -1,7 +1,10 @@
 package studentOrientation.util;
 
 public class UserChoices {
-    public enum SchoolBuilding{
+    public  enum SchoolTypes{
+        WWATSON, SOM
+    }
+    public enum SchoolBuildingCommute{
         BUSRIDE,ONFOOT
     }
     public enum GiftShop{
@@ -13,4 +16,5 @@ public class UserChoices {
     public enum Lecture{
         CS240, CS350
     }
+
 }

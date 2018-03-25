@@ -39,5 +39,16 @@ public class UserChoices {
             return val;
         }
     }
+    public enum Effort{
+        CAFECIW(200), //IN CALORIES
+        CAFEMW(250);
+        private final int val ;
+        Effort(int i) {
+            val = i;
+        }
+        public int getVal(){
+            return val;
+        }
 
+    }
 }

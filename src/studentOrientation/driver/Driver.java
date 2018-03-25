@@ -11,11 +11,9 @@ public class Driver {
 
     public static void main(String[] args) {
         CampusTourI cti = new MyCampusTour(UserChoices.SchoolBuildingCommute.BUSRIDE, UserChoices.GiftShop.EVENTCENTER, UserChoices.Cafe.CIW);
-        System.out.println(cti.getLocation());
-        System.out.println(cti.getCommute());
 
         CampusTourWorkshopI Events = new CampusTourWorkshop();
         Events.construct(cti);
-        System.out.println(cti.getTotalPlanDuration());
+//        System.out.println(cti.getTotalPlanDuration());
     }
 }

@@ -1,6 +1,6 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
-public class MountainView implements SelectingCafeteriaI{
+public class MountainView implements SelectingCafeteriaI {
     @Override
     public void setCost(int cost) {
 

@@ -1,6 +1,6 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
-public class EventCenter implements PickingGiftI{
+public class EventCenter implements PickingGiftI {
     @Override
     public void setLocation(String location) {
 

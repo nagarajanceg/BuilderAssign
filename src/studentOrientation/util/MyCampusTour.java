@@ -1,9 +1,7 @@
-package studentOrientation.driver;
+package studentOrientation.util;
 
-import studentOrientation.util.CIW;
-import studentOrientation.util.CampusTourI;
-import studentOrientation.util.SelectingCafeteriaI;
-import studentOrientation.util.UserChoices;
+import studentOrientation.workshop.CIW;
+import studentOrientation.workshop.SelectingCafeteriaI;
 
 public class MyCampusTour implements CampusTourI {
     private String  commute = null;

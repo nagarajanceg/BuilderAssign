@@ -1,18 +1,14 @@
 package studentOrientation.driver;
 
-import studentOrientation.util.CampusTourI;
-import studentOrientation.util.CampusTourWorkshop;
-import studentOrientation.util.CampusTourWorkshopI;
-import studentOrientation.util.UserChoices;
+import studentOrientation.util.*;
+import studentOrientation.workshop.CampusTourWorkshop;
+import studentOrientation.workshop.CampusTourWorkshopI;
+import studentOrientation.workshop.VisitSchoolBuildingI;
 
 public class Driver {
 
     public static void main(String[] args) {
-//        System.out.println(UserChoices.SchoolBuildingCommute.BUSRIDE +" "+ UserChoices.GiftShop.EVENTCENTER + " "
-//                +UserChoices.Cafe.CIW + UserChoices.Lecture.CS240);
-//        System.out.println(UserChoices.SchoolBuildingCommute.BUSRIDE.getClass().getSimpleName());
-
-        CampusTourI cti = new MyCampusTour(UserChoices.SchoolBuildingCommute.BUSRIDE, UserChoices.GiftShop.EVENTCENTER, UserChoices.Cafe.CIW);
+        CampusTourI cti = new MyCampusTour(VisitSchoolBuildingI.UserChoices.SchoolBuildingCommute.BUSRIDE, VisitSchoolBuildingI.UserChoices.GiftShop.EVENTCENTER, VisitSchoolBuildingI.UserChoices.Cafe.CIW);
         System.out.println(cti.getLocation());
         System.out.println(cti.getCommute());
 

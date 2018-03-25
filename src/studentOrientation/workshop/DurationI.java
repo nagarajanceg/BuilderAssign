@@ -1,4 +1,4 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
 public interface DurationI {
 	int getDuration(String type);

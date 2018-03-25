@@ -1,6 +1,8 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
-public class CampusTourWorkshop implements CampusTourWorkshopI{
+import studentOrientation.util.CampusTourI;
+
+public class CampusTourWorkshop implements CampusTourWorkshopI {
     @Override
     public void construct(CampusTourI tour) {
         tour.buildPlanCafe();

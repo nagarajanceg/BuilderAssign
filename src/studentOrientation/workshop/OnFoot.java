@@ -1,6 +1,6 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
-public class OnFoot implements VisitSchoolBuildingI{
+public class OnFoot implements VisitSchoolBuildingI {
     @Override
     public void setCommute(String mode) {
 

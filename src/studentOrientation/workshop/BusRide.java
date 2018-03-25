@@ -1,6 +1,6 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
-public class BusRide implements VisitSchoolBuildingI{
+public class BusRide implements VisitSchoolBuildingI {
 
     @Override
     public void setCommute(String mode) {

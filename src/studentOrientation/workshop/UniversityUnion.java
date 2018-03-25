@@ -1,6 +1,8 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
-public class UniversityUnion implements PickingGiftI{
+import studentOrientation.workshop.PickingGiftI;
+
+public class UniversityUnion implements PickingGiftI {
     @Override
     public void setLocation(String location) {
 

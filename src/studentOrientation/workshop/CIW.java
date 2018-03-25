@@ -1,12 +1,14 @@
-package studentOrientation.util;
+package studentOrientation.workshop;
 
-public class CIW implements SelectingCafeteriaI{
+import studentOrientation.util.CampusTourI;
+
+public class CIW implements SelectingCafeteriaI {
     private CampusTourI tourObject;
     private int time;
     private int cost;
     public CIW(){
-        this.setDuration(UserChoices.Duration.CAFE.getVal());
-        this.setCost(UserChoices.Cost.CAFECIW.getVal());
+        this.setDuration(VisitSchoolBuildingI.UserChoices.Duration.CAFE.getVal());
+        this.setCost(VisitSchoolBuildingI.UserChoices.Cost.CAFECIW.getVal());
     }
 
     @Override

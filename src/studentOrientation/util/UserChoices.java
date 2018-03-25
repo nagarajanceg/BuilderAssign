@@ -18,9 +18,21 @@ public class UserChoices {
     }
     public enum Duration{
         SCHOOLVISIT(60),
-        PICKGIFT(20);
+        PICKGIFT(20),
+        CAFE(60);
         private final int val ;
         Duration(int i) {
+            val = i;
+        }
+        public int getVal(){
+            return val;
+        }
+    }
+    public enum Cost{
+        CAFECIW(20),
+        CAFEMW(30);
+        private final int val ;
+        Cost(int i) {
             val = i;
         }
         public int getVal(){

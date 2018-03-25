@@ -1,22 +1,36 @@
 package studentOrientation.driver;
 
+import studentOrientation.util.CIW;
 import studentOrientation.util.CampusTourI;
+import studentOrientation.util.SelectingCafeteriaI;
 import studentOrientation.util.UserChoices;
 
 public class MyCampusTour implements CampusTourI {
     private String  commute = null;
     private String giftLocation = null;
+    private String cafeName = null;
     private double schoolvisitCost;
     private int commuteDuration = 0;
     private int giftChoosingDuration = 0;
     private int totalPlanDuration =0 ;
-    public MyCampusTour(UserChoices.SchoolBuildingCommute commute, UserChoices.GiftShop eventcenter) {
+    private int cafeDuration = 0;
+    private int cafeCost = 0;
+    public SelectingCafeteriaI cafeI = null;
+
+    public MyCampusTour(UserChoices.SchoolBuildingCommute commute, UserChoices.GiftShop eventcenter, UserChoices.Cafe cafe) {
         this.setCommute(commute.toString());
         this.setLocation(eventcenter.toString());
+        this.setCafe(cafe.toString());
         this.setDuration(commute.toString());
         this.setDuration(eventcenter.toString());
     }
 
+    private void setCafe(String name){
+        this.cafeName = name;
+    }
+    public String getCafe(){
+        return this.cafeName;
+    }
     @Override
     public int getDuration(String type) {
         if(type.equals(UserChoices.SchoolBuildingCommute.BUSRIDE.toString())){
@@ -25,6 +39,11 @@ public class MyCampusTour implements CampusTourI {
             return giftChoosingDuration;
         }
         return 0;
+    }
+
+    @Override
+    public void sDuration(int time) {
+
     }
 
     @Override
@@ -80,6 +99,18 @@ public class MyCampusTour implements CampusTourI {
     @Override
     public void buildPlanDuration(){
         totalPlanDuration  = calculateDurationByEnumType(UserChoices.SchoolBuildingCommute.values());
+
+        totalPlanDuration += cafeI.getDuration();
+//        getCost
+
         System.out.println("Plan Duration == "+ totalPlanDuration);
+    }
+    @Override
+    public void buildPlanCafe(){
+        System.out.println("value::"+UserChoices.Cafe.CIW.name());
+        if(cafeName.equals(UserChoices.Cafe.CIW.toString())){
+            cafeI = new CIW();
+            System.out.println(cafeI.getDuration() + " "+ cafeI.getCost());
+        }
     }
 }

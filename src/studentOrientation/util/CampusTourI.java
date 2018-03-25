@@ -4,5 +4,6 @@ public interface CampusTourI extends VisitSchoolBuildingI, PickingGiftI, Duratio
     void setSchoolVisitCost();
     void buildPlanDuration();
     //void setCafeOnlineCharge();
-
+    int getTotalPlanDuration();
+    void buildPlanCafe();
 }

@@ -3,7 +3,7 @@ package studentOrientation.util;
 public class CampusTourWorkshop implements CampusTourWorkshopI{
     @Override
     public void construct(CampusTourI tour) {
-//        tour.buildSchoolVisit()
+        tour.buildPlanDuration();
     }
 
 /*	public void construct(Enums)

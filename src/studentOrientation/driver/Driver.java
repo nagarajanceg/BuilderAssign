@@ -11,10 +11,13 @@ public class Driver {
         System.out.println(UserChoices.SchoolBuildingCommute.BUSRIDE +" "+ UserChoices.GiftShop.EVENTCENTER + " "
                 +UserChoices.Cafe.CIW + UserChoices.Lecture.CS240);
         System.out.println(UserChoices.SchoolBuildingCommute.BUSRIDE.getClass().getSimpleName());
+
         CampusTourI cti=new MyCampusTour(UserChoices.SchoolBuildingCommute.BUSRIDE, UserChoices.GiftShop.EVENTCENTER);
         System.out.println(cti.getLocation());
         System.out.println(cti.getCommute());
+
         CampusTourWorkshopI Events=new CampusTourWorkshop();
         Events.construct(cti);
+        System.out.println(cti.getTotalPlanDuration());
     }
 }

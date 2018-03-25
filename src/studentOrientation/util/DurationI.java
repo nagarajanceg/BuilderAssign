@@ -1,6 +1,7 @@
 package studentOrientation.util;
 
 public interface DurationI {
-	public void getDuration();
-	public void setDuration();
+	int getDuration(String type);
+	void setDuration(String type);
+	int getTotalPlanDuration();
 }

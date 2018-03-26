@@ -1,6 +1,5 @@
 package studentOrientation.workshop;
 
-public interface PickingGiftI {
-    void setLocation(String location);
-    String getLocation();
+public interface PickingGiftI extends DurationI,EffortI,CostI,CarbonFootprintI {
+
 }

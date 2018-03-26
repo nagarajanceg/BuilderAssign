@@ -7,12 +7,8 @@ public class CampusTourWorkshop implements CampusTourWorkshopI {
     public void construct(CampusTourI tour) {
         tour.buildPlanCafe();
         tour.buildPlanSchool();
+        tour.buildPlanLecture();
+        tour.buildPlanGift();
         tour.buildPlanEstimate();
     }
-
-/*	public void construct(Enums)
-	{
-		
-	}
-*/
 }

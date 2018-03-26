@@ -1,5 +1,5 @@
 package studentOrientation.workshop;
 
-public interface AttendingShortLectureI {
+public interface AttendingShortLectureI extends DurationI,EffortI,CostI,CarbonFootprintI{
 
 }

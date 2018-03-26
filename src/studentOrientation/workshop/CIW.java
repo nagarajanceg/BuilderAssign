@@ -1,14 +1,17 @@
 package studentOrientation.workshop;
 
-import studentOrientation.util.CampusTourI;
 import studentOrientation.util.UserChoices;
 
 public class CIW implements SelectingCafeteriaI {
     private int time;
     private int cost;
+    private int effort;
+    private int carbon;
     public CIW(){
-        this.setDuration(UserChoices.Duration.CAFE.getVal());
+        this.setDuration(UserChoices.Duration.CAFECIW.getVal());
         this.setCost(UserChoices.Cost.CAFECIW.getVal());
+        this.setEffort(UserChoices.Effort.CAFECIW.getVal());
+        this.setCarbonFootprint(UserChoices.Carbon.CAFECIW.getVal());
     }
 
     @Override
@@ -29,5 +32,26 @@ public class CIW implements SelectingCafeteriaI {
     @Override
     public int getDuration() {
         return time;
+    }
+
+    @Override
+    public int getEffort() {
+        return this.effort;
+
+    }
+
+    @Override
+    public void setEffort(int effort) {
+        this.effort=effort;
+    }
+
+    @Override
+    public int getCarbonFootprint() {
+        return this.carbon;
+    }
+
+    @Override
+    public void setCarbonFootprint(int carbon) {
+        this.carbon=carbon;
     }
 }

@@ -1,8 +1,6 @@
 package studentOrientation.workshop;
 
-public interface SelectingCafeteriaI extends DurationI{
+public interface SelectingCafeteriaI extends DurationI,EffortI,CostI,CarbonFootprintI{
     void setCost(int cost);
-   // void setDuration(int time);
     int getCost();
-    //int getDuration();
 }

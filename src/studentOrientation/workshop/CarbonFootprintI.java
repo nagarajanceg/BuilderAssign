@@ -1,6 +1,6 @@
 package studentOrientation.workshop;
 
 public interface CarbonFootprintI {
-	public void getCarbonFootprint();
-	public void setCarbonFootprint();
+	public int getCarbonFootprint();
+	public void setCarbonFootprint(int carbon);
 }

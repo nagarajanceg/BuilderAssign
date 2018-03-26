@@ -1,6 +1,6 @@
 package studentOrientation.workshop;
 
 public interface EffortI {
-	public void getEffort();
-	public void setEffort();
+	public int getEffort();
+	public void setEffort(int effort);
 }

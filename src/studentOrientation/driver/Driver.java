@@ -10,7 +10,7 @@ import studentOrientation.util.UserChoices;
 public class Driver {
 
     public static void main(String[] args) {
-        CampusTourI cti = new MyCampusTour(UserChoices.SchoolBuildingCommute.BUSRIDE, UserChoices.GiftShop.EVENTCENTER, UserChoices.Cafe.CIW);
+        CampusTourI cti = new MyCampusTour(UserChoices.SchoolTypes.WATSON,UserChoices.SchoolBuildingCommute.BUSRIDE, UserChoices.GiftShop.EVENTCENTER, UserChoices.Cafe.MOUNTAINVIEW);
 
         CampusTourWorkshopI Events = new CampusTourWorkshop();
         Events.construct(cti);

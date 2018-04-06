@@ -17,7 +17,6 @@ public class Som implements SchoolBuildingI {
     private int carbon;
     
     public Som(){
-    	System.out.println("time in con =="+ time);
         this.setDuration(UserChoices.Duration.SOM.getVal());
         this.setCost(UserChoices.Cost.SOM.getVal());
         this.setCarbonFootprint(UserChoices.Carbon.SOM.getVal());

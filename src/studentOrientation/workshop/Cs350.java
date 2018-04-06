@@ -17,7 +17,6 @@ public class Cs350 implements AttendingShortLectureI {
     private int carbon;
     
     public Cs350(){
-    	System.out.println("time in con =="+ time);
         this.setDuration(UserChoices.Duration.CS350.getVal());
         this.setCost(UserChoices.Cost.CS350.getVal());
         this.setCarbonFootprint(UserChoices.Carbon.CS350.getVal());

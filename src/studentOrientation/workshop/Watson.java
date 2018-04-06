@@ -17,7 +17,6 @@ public class Watson implements SchoolBuildingI {
     private int carbon;
     
     public Watson(){
-    	System.out.println("time in con =="+ time);
         this.setDuration(UserChoices.Duration.WATSON.getVal());
         this.setCost(UserChoices.Cost.WATSON.getVal());
         this.setCarbonFootprint(UserChoices.Carbon.WATSON.getVal());

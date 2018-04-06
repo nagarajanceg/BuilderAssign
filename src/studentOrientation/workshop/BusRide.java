@@ -17,7 +17,6 @@ public class BusRide implements VisitSchoolBuildingI {
     private int carbon;
     
     public BusRide(){
-    	System.out.println("time in con =="+ time);
         this.setDuration(UserChoices.Duration.BUSRIDE.getVal());
         this.setCost(UserChoices.Cost.BUSRIDE.getVal());
         this.setCarbonFootprint(UserChoices.Carbon.BUS.getVal());

@@ -7,19 +7,20 @@ package studentOrientation.util;
  * Class which has all the enums specified at one place
  */
 public class UserChoices {
-    public  enum SchoolTypes{
+
+    public  enum SchoolTypes implements EnumI{
         WATSON, SOM
     }
-    public enum SchoolBuildingCommute{
+    public enum SchoolBuildingCommute implements EnumI{
         BUSRIDE,ONFOOT
     }
-    public enum GiftShop{
+    public enum GiftShop implements EnumI{
         EVENTCENTER, UU
     }
-    public enum Cafe{
+    public enum Cafe implements EnumI{
         CIW, MOUNTAINVIEW
     }
-    public enum Lecture{
+    public enum Lecture implements EnumI{
         CS240, CS350
     }
     public enum Duration{

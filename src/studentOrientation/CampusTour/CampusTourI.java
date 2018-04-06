@@ -1,4 +1,4 @@
-package studentOrientation.util;
+package studentOrientation.CampusTour;
 
 public interface CampusTourI {
     void buildPlanCafe();

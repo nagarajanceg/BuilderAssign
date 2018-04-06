@@ -1,6 +1,6 @@
 package studentOrientation.workshop;
 
-import studentOrientation.util.CampusTourI;
+import studentOrientation.CampusTour.CampusTourI;
 
 public interface CampusTourWorkshopI {
 	void construct(CampusTourI tour);

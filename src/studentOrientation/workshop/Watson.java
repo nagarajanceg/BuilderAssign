@@ -9,7 +9,7 @@ import studentOrientation.util.UserChoices;
  * Class which calculates duration, cost, effort and carbon footprint if Watson school is chosen by the user
  */
 
-public class Watson implements SchoolBuildingI { //newly added
+public class Watson implements SchoolBuildingI { 
 
 	private int time;
     private int cost;

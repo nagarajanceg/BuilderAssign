@@ -2,7 +2,7 @@ package studentOrientation.util;
 
 public interface CampusTourI {
     void buildPlanCafe();
-    void buildPlanSchoolType(); //newly added
+    void buildPlanSchoolType(); 
     void buildPlanSchool();
     void buildPlanLecture();
     void buildPlanGift();

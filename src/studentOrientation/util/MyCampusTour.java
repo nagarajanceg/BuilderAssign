@@ -19,11 +19,11 @@ public class MyCampusTour implements CampusTourI {
     private String commute = null;
     private String lecture = null;
     private String gift = null;
-    private String school = null; //newly added
+    private String school = null; 
     private int totalPlanDuration =0 ;
-    private int totalPlanCost= 0; //newly added
-    private int totalPlanEffort = 0; //newly added
-    private int totalPlanCarbon = 0; //newly added
+    private int totalPlanCost= 0; 
+    private int totalPlanEffort = 0; 
+    private int totalPlanCarbon = 0; 
     private SelectingCafeteriaI cafeI = null;
     private VisitSchoolBuildingI schoolI = null;
     private AttendingShortLectureI lectureI = null;
@@ -46,8 +46,8 @@ public class MyCampusTour implements CampusTourI {
         giftFactory = new GiftSimpleFactory();
         lectureFactory = new LectureSimpleFactory();
         schoolFactory = new SchoolSimpleFactory();
-        schoolTypeFactory = new SchoolTypeSimpleFactory(); //newly added
-        this.setSchool(school.toString()); //newly added
+        schoolTypeFactory = new SchoolTypeSimpleFactory(); 
+        this.setSchool(school.toString()); 
         this.setCafe(cafe.toString());
         this.setCommute(commute.toString());
         this.setLecture(lectureIn.toString());
@@ -65,12 +65,12 @@ public class MyCampusTour implements CampusTourI {
 				+ lectureFactory + ", schoolFactory=" + schoolFactory + "]";
 	}
     
-   //newly added 
+   
     public String getSchool() {
 		return school;
 	}
 
-    //newly added
+   
 	public void setSchool(String school) {
 		this.school = school;
 	}
@@ -112,27 +112,27 @@ public class MyCampusTour implements CampusTourI {
         this.totalPlanDuration = totalPlanDuration;
     }
 
-    public int getTotalPlanCost() { //newly added
+    public int getTotalPlanCost() { 
 		return totalPlanCost;
 	}
 
-	public void setTotalPlanCost(int totalPlanCost) {//newly added
+	public void setTotalPlanCost(int totalPlanCost) {
 		this.totalPlanCost = totalPlanCost;
 	}
 
-	public int getTotalPlanEffort() {//newly added
+	public int getTotalPlanEffort() {
 		return totalPlanEffort;
 	}
 
-	public void setTotalPlanEffort(int totalPlanEffort) {//newly added
+	public void setTotalPlanEffort(int totalPlanEffort) {
 		this.totalPlanEffort = totalPlanEffort;
 	}
 
-	public int getTotalPlanCarbon() {//newly added
+	public int getTotalPlanCarbon() {
 		return totalPlanCarbon;
 	}
 
-	public void setTotalPlanCarbon(int totalPlanCarbon) {//newly added
+	public void setTotalPlanCarbon(int totalPlanCarbon) {
 		this.totalPlanCarbon = totalPlanCarbon;
 	}
 
@@ -149,9 +149,9 @@ public class MyCampusTour implements CampusTourI {
         System.out.println("Plan effort == "+ effort);
         System.out.println("Plan carbon == "+ carbon);
         this.setTotalPlanDuration(duration);
-        this.setTotalPlanCost(cost); //newly added
-        this.setTotalPlanEffort(effort); //newly added
-        this.setTotalPlanCarbon(carbon); //newly added
+        this.setTotalPlanCost(cost); 
+        this.setTotalPlanEffort(effort); 
+        this.setTotalPlanCarbon(carbon); 
     }
     @Override
     public void buildPlanCafe(){
@@ -179,7 +179,7 @@ public class MyCampusTour implements CampusTourI {
     }
 
     @Override
-   	public void buildPlanSchoolType() { //newly added
+   	public void buildPlanSchoolType() { 
            buildingI = schoolTypeFactory.createFactory(school);
            System.out.println(buildingI.getDuration() + " "+ buildingI.getCost());
    	}

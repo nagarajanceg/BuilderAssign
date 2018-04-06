@@ -2,11 +2,19 @@ package studentOrientation.workshop;
 
 import studentOrientation.util.UserChoices;
 
+/**
+ * 
+ * @author Abhi ,Nagaraj
+ *
+ * Class which calculates duration, cost, effort and carbon footprint if Eventcenter is chosen by the user for picking gift
+ */
+
 public class EventCenter implements PickingGiftI {
     private int time;
     private int cost;
     private int effort;
     private int carbon;
+    
     public EventCenter(){
         this.setDuration(UserChoices.Duration.PICKGIFTEC.getVal());
         this.setCost(UserChoices.Cost.PICKGIFTEC.getVal());
@@ -14,6 +22,13 @@ public class EventCenter implements PickingGiftI {
         this.setCarbonFootprint(UserChoices.Carbon.PICKGIFTEC.getVal());
     }
 
+
+	@Override
+	public String toString() {
+		return "EventCenter [time=" + time + ", cost=" + cost + ", effort="
+				+ effort + ", carbon=" + carbon + "]";
+	}
+    
     @Override
     public void setCost(int cost) {
         this.cost = cost;
@@ -54,4 +69,5 @@ public class EventCenter implements PickingGiftI {
     public void setCarbonFootprint(int carbon) {
         this.carbon=carbon;
     }
+
 }

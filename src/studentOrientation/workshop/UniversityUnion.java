@@ -2,11 +2,19 @@ package studentOrientation.workshop;
 
 import studentOrientation.util.UserChoices;
 
+/**
+ * 
+ * @author Abhi ,Nagaraj
+ *
+ * Class which calculates duration, cost, effort and carbon footprint if union is chosen by the user to pick gift
+ */
+
 public class UniversityUnion implements PickingGiftI {
     private int time;
     private int cost;
     private int effort;
     private int carbon;
+    
     public UniversityUnion(){
         this.setDuration(UserChoices.Duration.PICKGIFTUU.getVal());
         this.setCost(UserChoices.Cost.PICKGIFTUU.getVal());
@@ -14,6 +22,13 @@ public class UniversityUnion implements PickingGiftI {
         this.setCarbonFootprint(UserChoices.Carbon.PICKGIFTUU.getVal());
     }
 
+    
+    @Override
+	public String toString() {
+		return "UniversityUnion [time=" + time + ", cost=" + cost + ", effort="
+				+ effort + ", carbon=" + carbon + "]";
+	}
+    
     @Override
     public void setCost(int cost) {
         this.cost = cost;
@@ -54,4 +69,6 @@ public class UniversityUnion implements PickingGiftI {
     public void setCarbonFootprint(int carbon) {
         this.carbon=carbon;
     }
+
+	
 }

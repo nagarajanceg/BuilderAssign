@@ -2,11 +2,19 @@ package studentOrientation.workshop;
 
 import studentOrientation.util.UserChoices;
 
+/**
+ * 
+ * @author Abhi ,Nagaraj
+ *
+ * Class which calculates duration, cost, effort and carbon footprint if CIW cafe is chosen by the user
+ */
+
 public class CIW implements SelectingCafeteriaI {
     private int time;
     private int cost;
     private int effort;
     private int carbon;
+    
     public CIW(){
         this.setDuration(UserChoices.Duration.CAFECIW.getVal());
         this.setCost(UserChoices.Cost.CAFECIW.getVal());
@@ -14,6 +22,12 @@ public class CIW implements SelectingCafeteriaI {
         this.setCarbonFootprint(UserChoices.Carbon.CAFECIW.getVal());
     }
 
+    @Override
+	public String toString() {
+		return "CIW [time=" + time + ", cost=" + cost + ", effort=" + effort
+				+ ", carbon=" + carbon + "]";
+	}
+    
     @Override
     public void setCost(int cost) {
         this.cost = cost;
@@ -54,4 +68,6 @@ public class CIW implements SelectingCafeteriaI {
     public void setCarbonFootprint(int carbon) {
         this.carbon=carbon;
     }
+
+	
 }

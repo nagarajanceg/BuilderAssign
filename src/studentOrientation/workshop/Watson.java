@@ -6,38 +6,39 @@ import studentOrientation.util.UserChoices;
  * 
  * @author Abhi ,Nagaraj
  *
- * Class which calculates duration, cost, effort and carbon footprint if onfoot transportation is chosen by the user
+ * Class which calculates duration, cost, effort and carbon footprint if Watson school is chosen by the user
  */
 
-public class OnFoot implements VisitSchoolBuildingI {
-    
+public class Watson implements SchoolBuildingI { //newly added
+
 	private int time;
     private int cost;
     private int effort;
     private int carbon;
     
-    public OnFoot(){
-        this.setDuration(UserChoices.Duration.ONFOOT.getVal());
-        this.setCost(UserChoices.Cost.ONFOOT.getVal());
-        this.setCarbonFootprint(UserChoices.Carbon.FOOT.getVal());
-        this.setEffort(UserChoices.Effort.FOOT.getVal());
+    public Watson(){
+    	System.out.println("time in con =="+ time);
+        this.setDuration(UserChoices.Duration.WATSON.getVal());
+        this.setCost(UserChoices.Cost.WATSON.getVal());
+        this.setCarbonFootprint(UserChoices.Carbon.WATSON.getVal());
+        this.setEffort(UserChoices.Effort.WATSON.getVal());
     }
 	
+    
     @Override
 	public String toString() {
-		return "OnFoot [time=" + time + ", cost=" + cost + ", effort=" + effort
-				+ ", carbon=" + carbon + "]";
+		return "Watson [time=" + time + ", cost=" + cost + ", effort="
+				+ effort + ", carbon=" + carbon + "]";
 	}
 	
 	@Override
 	public int getDuration() {
-		
 		return this.time;
 	}
 
 	@Override
 	public void setDuration(int time) {
-		this.time=time;
+		this.time = time;
 		
 	}
 
@@ -49,13 +50,11 @@ public class OnFoot implements VisitSchoolBuildingI {
 
 	@Override
 	public void setEffort(int effort) {
-		// TODO Auto-generated method stub
-		this.effort=effort;
+		this.effort = effort;
 	}
 
 	@Override
 	public int getCost() {
-		// TODO Auto-generated method stub
 		return this.cost;
 	}
 
@@ -72,10 +71,8 @@ public class OnFoot implements VisitSchoolBuildingI {
 
 	@Override
 	public void setCarbonFootprint(int carbon) {
-		this.carbon=carbon;
-		
+		this.carbon = carbon;
 	}
-
 
 
 }

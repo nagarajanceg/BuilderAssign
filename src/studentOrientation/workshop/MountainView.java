@@ -2,6 +2,13 @@ package studentOrientation.workshop;
 
 import studentOrientation.util.UserChoices;
 
+/**
+ * 
+ * @author Abhi ,Nagaraj
+ *
+ * Class which calculates duration, cost, effort and carbon footprint if Mountain view cafe is chosen by the user
+ */
+
 public class MountainView implements SelectingCafeteriaI {
     private int time;
     private int cost;
@@ -15,6 +22,12 @@ public class MountainView implements SelectingCafeteriaI {
         this.setCarbonFootprint(UserChoices.Carbon.CAFEMW.getVal());
     }
 
+    @Override
+	public String toString() {
+		return "MountainView [time=" + time + ", cost=" + cost + ", effort="
+				+ effort + ", carbon=" + carbon + "]";
+	}
+    
     @Override
     public void setCost(int cost) {
         this.cost = cost;
@@ -55,4 +68,6 @@ public class MountainView implements SelectingCafeteriaI {
     public void setCarbonFootprint(int carbon) {
         this.carbon = carbon;
     }
+
+	
 }

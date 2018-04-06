@@ -2,12 +2,20 @@ package studentOrientation.workshop;
 
 import studentOrientation.util.UserChoices;
 
+/**
+ * 
+ * @author Abhi ,Nagaraj
+ *
+ * Class which calculates duration, cost, effort and carbon footprint if BusRide is chosen by the user
+ */
+
 public class BusRide implements VisitSchoolBuildingI {
 
 	private int time;
     private int cost;
     private int effort;
     private int carbon;
+    
     public BusRide(){
     	System.out.println("time in con =="+ time);
         this.setDuration(UserChoices.Duration.BUSRIDE.getVal());
@@ -16,6 +24,12 @@ public class BusRide implements VisitSchoolBuildingI {
         this.setEffort(UserChoices.Effort.BUS.getVal());
     }
 	
+    
+    @Override
+	public String toString() {
+		return "BusRide [time=" + time + ", cost=" + cost + ", effort="
+				+ effort + ", carbon=" + carbon + "]";
+	}
 	
 	@Override
 	public int getDuration() {
@@ -59,4 +73,6 @@ public class BusRide implements VisitSchoolBuildingI {
 	public void setCarbonFootprint(int carbon) {
 		this.carbon = carbon;
 	}
+
+
 }

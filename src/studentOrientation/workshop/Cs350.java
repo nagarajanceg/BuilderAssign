@@ -2,12 +2,20 @@ package studentOrientation.workshop;
 
 import studentOrientation.util.UserChoices;
 
+/**
+ * 
+ * @author Abhi ,Nagaraj
+ *
+ * Class which calculates duration, cost, effort and carbon footprint if cs350 lecture is chosen by the user
+ */
+
 public class Cs350 implements AttendingShortLectureI {
 
 	private int time;
     private int cost;
     private int effort;
     private int carbon;
+    
     public Cs350(){
     	System.out.println("time in con =="+ time);
         this.setDuration(UserChoices.Duration.CS350.getVal());
@@ -15,6 +23,12 @@ public class Cs350 implements AttendingShortLectureI {
         this.setCarbonFootprint(UserChoices.Carbon.CS350.getVal());
         this.setEffort(UserChoices.Effort.CS350.getVal());
     }
+    
+    @Override
+	public String toString() {
+		return "Cs350 [time=" + time + ", cost=" + cost + ", effort=" + effort
+				+ ", carbon=" + carbon + "]";
+	}
     
     @Override
 	public int getDuration() {
@@ -58,4 +72,6 @@ public class Cs350 implements AttendingShortLectureI {
 	public void setCarbonFootprint(int carbon) {
 		this.carbon = carbon;
 	}
+
+	
 }

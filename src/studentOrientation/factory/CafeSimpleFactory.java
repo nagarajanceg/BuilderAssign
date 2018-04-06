@@ -5,7 +5,30 @@ import studentOrientation.workshop.CIW;
 import studentOrientation.workshop.MountainView;
 import studentOrientation.workshop.SelectingCafeteriaI;
 
+/**
+ * 
+ * @author Abhi, Nagaraj
+ *
+ * Class to choose type of cafeteria 
+ */
 public class CafeSimpleFactory {
+	
+	public CafeSimpleFactory()
+	{
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "CafeSimpleFactory [getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	
+	/**
+	 * 
+	 * @param type - type of cafeteria
+	 * @return 
+	 */
     public SelectingCafeteriaI createFactory( String type) {
         if(type.equals(UserChoices.Cafe.MOUNTAINVIEW.name())){
             return  new MountainView();
@@ -14,4 +37,6 @@ public class CafeSimpleFactory {
         }
         return null;
     }
+
+
 }

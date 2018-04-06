@@ -1,5 +1,11 @@
 package studentOrientation.util;
 
+/**
+ * 
+ * @author Abhi , Nagaraj
+ *
+ * Class which has all the enums specified at one place
+ */
 public class UserChoices {
     public  enum SchoolTypes{
         WATSON, SOM
@@ -18,6 +24,8 @@ public class UserChoices {
     }
     public enum Duration{
         //SCHOOLVISIT(60),
+    	WATSON(0), //newly added
+    	SOM(0),		//newly added
         PICKGIFTEC(20),
         PICKGIFTUU(30),
         CAFECIW(60),
@@ -36,14 +44,17 @@ public class UserChoices {
         }
     }
     public enum Cost{
+    	
+    	WATSON(0), //newly added
+    	SOM(0),		//newly added
         CAFECIW(20),
-        CAFEMW(30),
+        CAFEMW(30+(30*5/100)),
         ONFOOT(50),
         BUSRIDE(100),
         PICKGIFTEC(50),
         PICKGIFTUU(40),
         CS350(20),
-        CS240(40);
+        CS240(40+(40*10/100));
         private final int val ;
         Cost(int i) {
             val = i;
@@ -53,6 +64,8 @@ public class UserChoices {
         }
     }
     public enum Effort{
+    	WATSON(0), //newly added
+    	SOM(0),		//newly added
         CAFECIW(200), //IN CALORIES
         CAFEMW(250),
         BUS(500),
@@ -72,6 +85,8 @@ public class UserChoices {
     }
     
     public enum Carbon{
+    	WATSON(0), //newly added
+    	SOM(0),		//newly added
         CAFECIW(200), //IN CALORIES
         CAFEMW(250),
         BUS(500),

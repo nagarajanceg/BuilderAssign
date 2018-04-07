@@ -8,6 +8,7 @@ import studentOrientation.factory.SchoolTypeSimpleFactory;
 import studentOrientation.util.EnumI;
 import studentOrientation.util.ParameterI;
 import studentOrientation.util.ParameterMatcher;
+import studentOrientation.util.ParameterMatcherI;
 import studentOrientation.workshop.AttendingShortLectureI;
 import studentOrientation.workshop.PickingGiftI;
 import studentOrientation.workshop.SelectingCafeteriaI;
@@ -16,7 +17,7 @@ import studentOrientation.workshop.SchoolBuildingI;
 
 /**
  * @author Abhi , Nagaraj
- *
+ * <p>
  * Class where the user requirements are set
  */
 public class MyCampusTour implements CampusTourI, ParameterI {
@@ -25,7 +26,7 @@ public class MyCampusTour implements CampusTourI, ParameterI {
     private String commute = null;
     private String lecture = null;
     private String gift = null;
-    public String school = null;
+    private String school = null;
     private int totalPlanDuration = 0;
     private int totalPlanCost = 0;
     private int totalPlanEffort = 0;
@@ -48,7 +49,7 @@ public class MyCampusTour implements CampusTourI, ParameterI {
 
     public MyCampusTour(EnumI event1, EnumI event2, EnumI event3, EnumI event4, EnumI event5) {
 
-        ParameterMatcher parameterMatcher = new ParameterMatcher();
+        ParameterMatcherI parameterMatcher = new ParameterMatcher();
 
         parameterMatcher.match(this, event1);
         parameterMatcher.match(this, event2);
@@ -56,6 +57,7 @@ public class MyCampusTour implements CampusTourI, ParameterI {
         parameterMatcher.match(this, event4);
         parameterMatcher.match(this, event5);
         this.validator();
+
         cafeFactory = new CafeSimpleFactory();
         giftFactory = new GiftSimpleFactory();
         lectureFactory = new LectureSimpleFactory();
@@ -74,12 +76,13 @@ public class MyCampusTour implements CampusTourI, ParameterI {
                 + lectureFactory + ", schoolFactory=" + schoolFactory + "]";
     }
 
-    private void validator(){
-        if(getSchool() == null || getCommute() == null || getCafe() == null || getGift() == null || getLecture() == null){
+    private void validator() {
+        if (getSchool() == null || getCommute() == null || getCafe() == null || getGift() == null || getLecture() == null) {
             System.out.println("Chosen events not satisfied the Mandatory List ");
             System.exit(0);
         }
     }
+
     public String getSchool() {
         return school;
     }
@@ -93,18 +96,21 @@ public class MyCampusTour implements CampusTourI, ParameterI {
     public String getGift() {
         return gift;
     }
+
     @Override
     public void setGift(String gift) {
         this.gift = gift;
     }
+
     @Override
-     public void setCafe(String name) {
+    public void setCafe(String name) {
         this.cafeName = name;
     }
 
     public String getCafe() {
         return this.cafeName;
     }
+
     @Override
     public void setCommute(String name) {
         this.commute = name;
@@ -117,6 +123,7 @@ public class MyCampusTour implements CampusTourI, ParameterI {
     public String getLecture() {
         return lecture;
     }
+
     @Override
     public void setLecture(String lecture) {
         this.lecture = lecture;

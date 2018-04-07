@@ -87,7 +87,7 @@ public class UserChoices {
     public enum Carbon{
     	WATSON(0), 
     	SOM(0),		
-        CAFECIW(200), //IN CALORIES
+        CAFECIW(200),
         CAFEMW(250),
         BUS(500),
         FOOT(20),

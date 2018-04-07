@@ -1,7 +1,7 @@
 package studentOrientation.driver;
 
-import studentOrientation.CampusTour.CampusTourI;
-import studentOrientation.CampusTour.MyCampusTour;
+import studentOrientation.CampusTourPlanner.CampusTourI;
+import studentOrientation.CampusTourPlanner.MyCampusTour;
 import studentOrientation.workshop.CampusTourWorkshop;
 import studentOrientation.workshop.CampusTourWorkshopI;
 import studentOrientation.util.UserChoices;

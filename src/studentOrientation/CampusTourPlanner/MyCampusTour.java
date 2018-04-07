@@ -1,4 +1,4 @@
-package studentOrientation.CampusTour;
+package studentOrientation.CampusTourPlanner;
 
 import studentOrientation.factory.CafeSimpleFactory;
 import studentOrientation.factory.GiftSimpleFactory;

@@ -1,6 +1,6 @@
 package studentOrientation.workshop;
 
-import studentOrientation.CampusTour.CampusTourI;
+import studentOrientation.CampusTourPlanner.CampusTourI;
 
 /**
  * 

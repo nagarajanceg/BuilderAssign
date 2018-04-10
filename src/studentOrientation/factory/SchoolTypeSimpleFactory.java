@@ -30,7 +30,7 @@ public class SchoolTypeSimpleFactory {
         if(type.equals(UserChoices.SchoolTypes.WATSON.name())){
             return new Watson();
         }else if(type.equals(UserChoices.SchoolTypes.SOM.name())){
-            new Som();
+            return new Som();
         }
         return null;
     }

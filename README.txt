@@ -10,7 +10,7 @@ ant -buildfile src/build.xml all
 -----------------------------------------------------------------------
 ## To run by specifying arguments from command line
 ## We will use this to run your code
-ant -buildfile src/build.xml run -Darg0="input.txt" -Darg1="output1.txt"
+ant -buildfile src/build.xml run
 
 -----------------------------------------------------------------------
 ##To generate a javadoc from command line
@@ -25,5 +25,12 @@ ant -buildfile src/build.xml doc
  grade of 0 for the involved assignment for my first offense and that I
  will receive a grade of F for the course for any additional
  offense."
- [Date:03/11/2018]
+ [Date:04/9/2018]
 ------------------------------------------------------------------------
+Our Assumptions:
+
+In driver code the user options provided to the builder should have 5 arguments(SchoolTypes, SchoolBuildingCommute,
+GiftShop, Cafe, Lecture ) but the order of arguments doesn't matter. And we are having a validator to verify those
+5 arguments in builder constructor itself. Suppose in case of any missed arguments it will throw an exception with message
+"Chosen events not satisfied the Mandatory List".
+Few other sample input enums are commented in driver code.

@@ -31,7 +31,7 @@ public class SchoolSimpleFactory {
         if (type.equals(UserChoices.SchoolBuildingCommute.BUSRIDE.name())) {
             return new BusRide();
         } else if (type.equals(UserChoices.SchoolBuildingCommute.ONFOOT.name())) {
-            new OnFoot();
+            return new OnFoot();
         }
         return null;
     }

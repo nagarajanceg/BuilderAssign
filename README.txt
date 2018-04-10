@@ -28,9 +28,13 @@ ant -buildfile src/build.xml doc
  [Date:04/9/2018]
 ------------------------------------------------------------------------
 Our Assumptions:
+We used builder pattern to construct the event umbrella object. SimpleFactory used to get the necessary concrete
+event instance based on the type of enum chosen in the driver code.
 
 In driver code the user options provided to the builder should have 5 arguments(SchoolTypes, SchoolBuildingCommute,
 GiftShop, Cafe, Lecture ) but the order of arguments doesn't matter. And we are having a validator to verify those
 5 arguments in builder constructor itself. Suppose in case of any missed arguments it will throw an exception with message
 "Chosen events not satisfied the Mandatory List".
 Few other sample input enums are commented in driver code.
+
+

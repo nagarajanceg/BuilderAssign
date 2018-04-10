@@ -15,7 +15,7 @@ public class Driver {
 
     public static void main(String[] args) {
         CampusTourI tourItinerary = new MyCampusTour(
-                UserChoices.SchoolBuildingCommute.BUSRIDE,
+                UserChoices.SchoolTypes.SOM,
                 UserChoices.SchoolTypes.WATSON,
                 UserChoices.GiftShop.EVENTCENTER,
                 UserChoices.Cafe.MOUNTAINVIEW,

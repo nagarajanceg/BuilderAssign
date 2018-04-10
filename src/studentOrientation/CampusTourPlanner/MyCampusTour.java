@@ -77,8 +77,10 @@ public class MyCampusTour implements CampusTourI, ParameterI {
     }
 
     private void validator() {
+
         if (getSchool() == null || getCommute() == null || getCafe() == null || getGift() == null || getLecture() == null) {
-            System.out.println("Chosen events not satisfied the Mandatory List ");
+            System.out.println("Chosen events not satisfied our Mandatory List of Enums. Please Choose one event listed in the following categories");
+            System.out.print("SchoolTypes\nSchoolBuildingCommute\nGiftShop\nCafe\nLecture");
             System.exit(0);
         }
     }
@@ -169,10 +171,11 @@ public class MyCampusTour implements CampusTourI, ParameterI {
         cost = this.getTotalPlanCost() + cafeI.getCost() + schoolI.getCost() + lectureI.getCost() + giftI.getCost() + buildingI.getCost();
         effort = this.getTotalPlanEffort() + cafeI.getEffort() + schoolI.getEffort() + lectureI.getEffort() + giftI.getEffort() + buildingI.getEffort();
         carbon = this.getTotalPlanCarbon() + cafeI.getCarbonFootprint() + schoolI.getCarbonFootprint() + lectureI.getCarbonFootprint() + giftI.getCarbonFootprint() + buildingI.getCarbonFootprint();
-        System.out.println("Plan Duration == " + duration);
-        System.out.println("Plan cost == " + cost);
-        System.out.println("Plan effort == " + effort);
-        System.out.println("Plan carbon == " + carbon);
+        System.out.println("Total Plan Estimate");
+        System.out.println("Duration -> " + duration+ " mins");
+        System.out.println("Cost -> $" + cost);
+        System.out.println("Effort -> " + effort + " Calories");
+        System.out.println("Carbon -> " + carbon + " CO2e"); // measured in carbon dioxide equivalent
         this.setTotalPlanDuration(duration);
         this.setTotalPlanCost(cost);
         this.setTotalPlanEffort(effort);
